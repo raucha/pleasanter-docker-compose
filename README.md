@@ -24,7 +24,7 @@ docker-compose up
 ./test/test.bash
 ```
 
-## launch pleasanter as daemon
+### launch pleasanter as daemon
 
 ```
 docker-compose up -d
