@@ -29,3 +29,7 @@ docker-compose up
 ```
 docker-compose up -d
 ```
+
+### 参照元のセットアップ手順ページ
+
+https://pleasanter.org/manual/install-ubuntu-postgresql
