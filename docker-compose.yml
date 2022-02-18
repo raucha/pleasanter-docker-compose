@@ -1,1 +1,9 @@
-as
+version: '3'
+
+services:
+  plsasanter:
+    build:
+      context: ./docker
+      dockerfile: Dockerfile
+    ports:
+      - "5001:5000"
