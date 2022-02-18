@@ -32,4 +32,4 @@ docker-compose up -d
 
 ### 参照元のセットアップ手順ページ
 
-https://pleasanter.org/manual/install-ubuntu-postgresql
+[プリザンター .NET Core/PostgreSQLをUbuntuにインストールする](https://pleasanter.org/manual/install-ubuntu-postgresql)
