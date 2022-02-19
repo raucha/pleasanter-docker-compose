@@ -29,6 +29,7 @@ jobs:
 #         with:
 #           name: docker-image
 #           path: /tmp/docker-image.tar
+      - uses: actions/checkout@v2
       - name: Run connection test
         run: |
           docker-compose build
