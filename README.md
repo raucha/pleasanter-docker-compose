@@ -1,8 +1,8 @@
 # pleasanter-docker-compose
 
-## Getting started
-
 ![example branch parameter](https://github.com/raucha/pleasanter-docker-compose/actions/workflows/build-and-test.yml/badge.svg?branch=develop/add-github-actions)
+
+## Getting started
 
 ### launch pleasanter
 
