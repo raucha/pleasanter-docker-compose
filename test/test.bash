@@ -1,6 +1,6 @@
 #! /bin/bash
 
-URL='http://localhost:5001'
+URL='http://localhost:5000'
 curl -s ${URL}
 RESULT=$?
 
