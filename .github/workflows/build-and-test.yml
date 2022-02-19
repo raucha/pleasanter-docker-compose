@@ -36,7 +36,7 @@ jobs:
       - name: Test connection
         run: |
           sleep 60
-          ./test/test
+          ./test/test.bash
 
 # jobs:
 #   job_1:
