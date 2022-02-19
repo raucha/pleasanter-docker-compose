@@ -22,6 +22,7 @@ jobs:
   job_connection_test:
     name: connection_test
     runs-on: ubuntu-latest
+    needs: job_build
     steps:
 #       - name: Download Docker Image (Artifact)
 #         uses: actions/download-artifact@v2
