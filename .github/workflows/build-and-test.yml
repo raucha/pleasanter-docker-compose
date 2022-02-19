@@ -14,16 +14,26 @@ jobs:
       - run: ls ${{ github.workspace }}
 #       - run: docker-compose build -f ./docker-compose.yml
       - run: docker-compose build
-      - run: docker save pleasanter > /tmp/docker-image.tar
-      - uses: actions/upload-artifact@v2
-        with:
-          name: docker-image
-          path: /tmp/docker-image.tar
-#   job_connection_test:
-#     name: connection_test
-#     runs-on: ubuntu-latest
-#     steps:
-        
+#       - run: docker save pleasanter > /tmp/docker-image.tar
+#       - uses: actions/upload-artifact@v2
+#         with:
+#           name: docker-image
+#           path: /tmp/docker-image.tar
+  job_connection_test:
+    name: connection_test
+    runs-on: ubuntu-latest
+    steps:
+#       - name: Download Docker Image (Artifact)
+#         uses: actions/download-artifact@v2
+#         with:
+#           name: docker-image
+#           path: /tmp/docker-image.tar
+      - name: Run connection test
+        run: |
+          docker-compose build
+          docker-compose up
+          sleep 60
+          ./test/test
 
 # jobs:
 #   job_1:
