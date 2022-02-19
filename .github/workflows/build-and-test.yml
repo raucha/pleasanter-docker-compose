@@ -11,6 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - uses: actions/checkout@v2
+      - run: ls ${{ github.workspace }}
+      - run: docker-compose up ${{ github.workspace }}/docker-compose.yml
 
 # jobs:
 #   job_1:
