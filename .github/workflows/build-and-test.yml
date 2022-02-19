@@ -12,7 +12,7 @@ jobs:
     steps: 
       - uses: actions/checkout@v2
       - run: ls ${{ github.workspace }}
-      - run: docker-compose up ${{ github.workspace }}/docker-compose.yml
+      - run: docker-compose up -f ${{ github.workspace }}/docker-compose.yml
 
 # jobs:
 #   job_1:
