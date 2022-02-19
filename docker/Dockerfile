@@ -21,24 +21,15 @@ RUN apt-get update
 ## 場所と都市のインタラクティブ選択が出てこないようにするため
 ENV TZ=Asia/Tokyo
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
-# RUN apt-get install -y tzdata
-# ENV DEBIAN_FRONTEND noninteractive
-# RUN apt-get install -y dotnet-sdk-3.1 <<< $'6\n79\n'
-# RUN echo 6 | apt-get install -y dotnet-sdk-3.1
-# RUN sh -c '/bin/echo -e “6\n79” | apt-get install -y dotnet-sdk-3.1'
-# RUN printf "6\n" | apt-get install -y dotnet-sdk-3.1
 RUN apt-get install -y dotnet-sdk-3.1
 
 RUN apt-get install -y libgdiplus postgresql postgresql-contrib
-# RUN apt-get install -y postgresql postgresql-contrib
 
 RUN service postgresql start
 
 USER postgres
 
-# RUN psql -U postgres <<< $'alter role postgres with password \'XXXXX\';\ncreate database "Implem.Pleasanter";'
-
-# PostgreSQLのログ出力設定
+## PostgreSQLのログ出力設定
 # /etc/postgresql/12/main/postgresql.confを開き、以下の設定を編集します。
 # log_destination = 'stderr'
 # logging_collector = on
@@ -63,15 +54,3 @@ RUN apt-get install -y dotnet-sdk-5.0
 ADD ./docker-entrypoint.sh /
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
-
-
-
-# WORKDIR /web/pleasanter/Implem.CodeDefiner
-# RUN dotnet Implem.CodeDefiner.NetCore.dll _rds
-
-# WORKDIR /web/pleasanter/Implem.Pleasanter
-# # RUN dotnet Implem.Pleasanter.NetCore.dll
-# RUN dotnet Implem.Pleasanter.NetCore.dll --urls http://0.0.0.0:5000
-
-
-
