@@ -38,7 +38,7 @@ jobs:
           sleep 60
           ./test/test.bash
       - id: suc_date
-        run: echo "##[set-output name=data;]$(date +"%Y-%m-%d_%H-%M-%S)"
+        run: echo "##[set-output name=data;]$(date +'%Y-%m-%d_%H-%M-%S')"
       - name: Time badge
         uses: RubbaBoy/BYOB@v1.2.1
         with:
@@ -51,7 +51,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - id: date
-        run: echo "##[set-output name=data;]$(date +"%Y-%m-%d_%H-%M-%S)"
+        run: echo "##[set-output name=data;]$(date +'%Y-%m-%d_%H-%M-%S')"
       - name: Time badge
         uses: RubbaBoy/BYOB@v1.2.1
         with:
