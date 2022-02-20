@@ -1,7 +1,7 @@
 # pleasanter-docker-compose
 
-![example branch parameter](https://github.com/raucha/pleasanter-docker-compose/actions/workflows/build-and-connection-test.yml/badge.svg)  
-![テスト実施 at](https://byob.yarr.is/raucha/pleasanter-docker-compose/time)  
+![example branch parameter](https://github.com/raucha/pleasanter-docker-compose/actions/workflows/build-and-connection-test.yml/badge.svg)
+![テスト実施 at](https://byob.yarr.is/raucha/pleasanter-docker-compose/time)
 ![起動確認成功 at](https://byob.yarr.is/raucha/pleasanter-docker-compose/suc_time)
 
 ## 動作確認状況
