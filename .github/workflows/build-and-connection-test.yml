@@ -37,6 +37,19 @@ jobs:
         run: |
           sleep 60
           ./test/test.bash
+  job_testdate_badge:
+    runs-on: ubuntu-lateset
+    steps:
+      - id: date
+        run: echo "##[set-output name=data;]$(date)"
+      - name: Time badge
+        uses: RubbaBoy/BYOB@v1.2.1
+        with:
+          NAME: time
+          LABEL: 'Updated at'
+          STATUS: ${{ steps.date.outputs.data }}
+          COLOR: 00EEFF
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 # jobs:
 #   job_1:
