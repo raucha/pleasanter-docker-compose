@@ -37,6 +37,16 @@ jobs:
         run: |
           sleep 60
           ./test/test.bash
+      - id: suc_date
+        run: echo "##[set-output name=data;]$(date -I)"
+      - name: Time badge
+        uses: RubbaBoy/BYOB@v1.2.1
+        with:
+          NAME: suc_time
+          LABEL: '起動テスト最終成功日'
+          STATUS: ${{ steps.suc_date.outputs.data }}
+          COLOR: blue
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   job_testdate_badge:
     runs-on: ubuntu-latest
     steps:
@@ -46,9 +56,9 @@ jobs:
         uses: RubbaBoy/BYOB@v1.2.1
         with:
           NAME: time
-          LABEL: '自動テスト実行日 at'
+          LABEL: '起動テスト最終実施日'
           STATUS: ${{ steps.date.outputs.data }}
-          COLOR: BLUE
+          COLOR: blue
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 # jobs:
