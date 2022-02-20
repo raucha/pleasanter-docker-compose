@@ -52,7 +52,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - id: date
-        run: echo "##[set-output name=data;]$(date +'%Y-%m-%d--%H-%M-%S')"
+#         run: echo "##[set-output name=data;]$(date +'%Y-%m-%d--%H-%M-%S')"
+        run: echo "##[set-output name=data;]$(date -Iseconds)"
       - name: Time badge
         uses: RubbaBoy/BYOB@v1.2.1
         with:
