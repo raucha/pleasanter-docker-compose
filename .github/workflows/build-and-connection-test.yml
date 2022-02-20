@@ -8,7 +8,7 @@ on:
 jobs:
   job_build_and_test:
     name: build_docker_image
-    runs-on: ubuntu-latst
+    runs-on: ubuntu-latest
     steps: 
       - uses: actions/checkout@v2
       - run: ls ${{ github.workspace }}
@@ -38,7 +38,7 @@ jobs:
           sleep 60
           ./test/test.bash
   job_testdate_badge:
-    runs-on: ubuntu-lateset
+    runs-on: ubuntu-latest
     steps:
       - id: date
         run: echo "##[set-output name=data;]$(date)"
