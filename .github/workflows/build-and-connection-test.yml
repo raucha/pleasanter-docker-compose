@@ -39,7 +39,7 @@ jobs:
           ./test/test.bash
       - id: suc_date
 #         run: echo "##[set-output name=data;]$(date +'%Y-%m-%d--%H-%M-%S')"
-        run: echo "##[set-output name=data;]$(date --iso-8601 seconds)"
+        run: echo "##[set-output name=data;]$(date -Iseconds)"
       - name: Time badge
         uses: RubbaBoy/BYOB@v1.2.1
         with:
