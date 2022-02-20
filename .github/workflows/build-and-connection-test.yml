@@ -41,7 +41,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - id: date
-        run: echo "##[set-output name=data;]$(date)"
+        run: echo "##[set-output name=data;]$(date -I)"
       - name: Time badge
         uses: RubbaBoy/BYOB@v1.2.1
         with:
