@@ -4,16 +4,6 @@
 ![テスト実施 at](https://byob.yarr.is/raucha/pleasanter-docker-compose/time)
 ![起動確認成功 at](https://byob.yarr.is/raucha/pleasanter-docker-compose/suc_time)
 
-## 動作確認状況
-
-- このリポジトリは毎日動作確認を実施している．
-  - テスト項目
-    - `docker-compose`でDockerfileがビルドできること
-    - pleasanterを立ち上げてトップページにアクセスできること
-  - テスト実施方法
-    - `Github Actions`で毎朝10時に実行
-- テストの結果は↑のバッジに反映される．
-
 ## Getting started
 
 ### launch pleasanter
@@ -24,25 +14,28 @@ cd pleasanter-docker-compose
 docker-compose build
 docker-compose up
 #-> pleasanter is up on http://localhost:5001
+
+# If use pleasanter in background
+docker-compose up -d
 ```
 
 ### Access pleasanter
 
 - open [http://localhost:5001](http://localhost:5001) in browser
+  - user: `Administrator`
+  - pass: `pleasanter`
 
 ---
 
-### Test pleasanter is up
+### 自動テストについて
 
-```
-./test/test.bash
-```
-
-### launch pleasanter as daemon
-
-```
-docker-compose up -d
-```
+- このリポジトリは毎日動作確認を実施している．
+  - テスト項目
+    - `docker-compose`でDockerfileがビルドできること．
+    - pleasanterを立ち上げてトップページにアクセスできること．
+  - テスト実施方法
+    - `Github Actions`で毎朝10時に実行．
+- テストの結果は↑のバッジに反映される．
 
 ---
 
