@@ -6,17 +6,14 @@
 
 ## Getting started
 
-### launch pleasanter
+### Launch pleasanter
 
 ```bash
 git clone http://raucha/pleasanter-docker-compose
 cd pleasanter-docker-compose
 docker-compose build
-docker-compose up
-#-> pleasanter is up on http://localhost:5001
-
-# If use pleasanter in background
 docker-compose up -d
+#-> pleasanter is up on http://localhost:5001
 ```
 
 ### Access pleasanter
@@ -24,6 +21,13 @@ docker-compose up -d
 - open [http://localhost:5001](http://localhost:5001) in browser
   - user: `Administrator`
   - pass: `pleasanter`
+
+### Stop pleasanter
+
+```bash
+docker-compose down
+```
+
 
 ---
 
