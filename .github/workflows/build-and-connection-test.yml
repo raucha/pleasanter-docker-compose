@@ -46,9 +46,9 @@ jobs:
         uses: RubbaBoy/BYOB@v1.2.1
         with:
           NAME: time
-          LABEL: 'Updated at'
+          LABEL: '自動テスト実行日 at'
           STATUS: ${{ steps.date.outputs.data }}
-          COLOR: 00EEFF
+          COLOR: BLUE
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 # jobs:
