@@ -1,7 +1,8 @@
 # pleasanter-docker-compose
 
 ![example branch parameter](https://github.com/raucha/pleasanter-docker-compose/actions/workflows/build-and-connection-test.yml/badge.svg)
-![](https://byob.yarr.is/raucha/pleasanter-docker-compose/time)
+
+![last test date](https://byob.yarr.is/raucha/pleasanter-docker-compose/time)
 
 ## Getting started
 
