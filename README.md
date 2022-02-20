@@ -4,11 +4,14 @@
 ![テスト実施 at](https://byob.yarr.is/raucha/pleasanter-docker-compose/time)  
 ![起動確認成功 at](https://byob.yarr.is/raucha/pleasanter-docker-compose/suc_time)
 
-## この環境の動作確認について
+## 動作確認状況
 
-- このリポジトリは毎日AM10時に下記をテストしている．
-  - `docker-compose`がビルドできること
-  - pleasanterを立ち上げてトップページにアクセスできること
+- このリポジトリは毎日動作確認を実施している．
+  - テスト項目
+    - `docker-compose`でDockerfileがビルドできること
+    - pleasanterを立ち上げてトップページにアクセスできること
+  - テスト実施方法
+    - `Github Actions`で毎朝10時に実行
 - テストの結果は↑のバッジに反映される．
 
 ## Getting started
@@ -41,12 +44,14 @@ docker-compose up
 docker-compose up -d
 ```
 
+---
+
 ### メモ
 
 - どうもpleasanterのバージョンごとのセットアップ手順の変化が激しい？
 - 先人の作られたpleasanterのdocker環境がどれも動作しなくなっていた
- - [twintee/pleasanter-docker](https://github.com/twintee/pleasanter-docker)
- - [coleyon/pleasanter-docker](https://github.com/coleyon/pleasanter-docker)
+  - [twintee/pleasanter-docker](https://github.com/twintee/pleasanter-docker)
+  - [coleyon/pleasanter-docker](https://github.com/coleyon/pleasanter-docker)
 - → 毎日の自動テストで実行可能が維持されてることを確認している．
 
 
