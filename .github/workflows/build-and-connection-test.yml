@@ -7,7 +7,7 @@ on:
 
 jobs:
   job_build_and_test:
-    name: build_docker_image
+    name: Build docker-compose and do connection test
     runs-on: ubuntu-latest
     steps: 
       - uses: actions/checkout@v2
@@ -36,6 +36,7 @@ jobs:
           COLOR: blue
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   job_testdate_badge:
+    name: Make test date badge
     runs-on: ubuntu-latest
     steps:
       - id: date
