@@ -43,7 +43,7 @@ jobs:
         uses: RubbaBoy/BYOB@v1.2.1
         with:
           NAME: suc_time
-          LABEL: '起動テスト最終成功日'
+          LABEL: 'テスト成功 at'
           STATUS: ${{ steps.suc_date.outputs.data }}
           COLOR: blue
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -56,7 +56,7 @@ jobs:
         uses: RubbaBoy/BYOB@v1.2.1
         with:
           NAME: time
-          LABEL: '起動テスト最終実施日'
+          LABEL: 'テスト実施 at'
           STATUS: ${{ steps.date.outputs.data }}
           COLOR: blue
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
