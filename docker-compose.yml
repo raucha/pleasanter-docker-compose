@@ -1,10 +1,22 @@
 version: '3'
 
+x-proxy: &proxy
+  - HTTP_PROXY=$HTTP_PROXY
+  - http_proxy=$http_proxy
+  - HTTPS_PROXY=$HTTPS_PROXY
+  - https_proxy=$https_proxy
+  - FTP_PROXY=$FTP_PROXY
+  - ftp_proxy=$ftp_proxy
+  - NO_PROXY=$NO_PROXY
+  - no_proxy=$no_proxy
+
 services:
   plsasanter:
     build:
       context: ./docker
       dockerfile: Dockerfile
+      args: *proxy
     image: pleasanter
     ports:
       - "5001:5000"
+    environment: *proxy
