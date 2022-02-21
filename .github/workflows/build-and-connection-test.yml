@@ -3,7 +3,7 @@ name: build and test
 on: 
   push:
   schedule:
-    - cron: '* 10 * * *'
+    - cron: '0 10 * * *'
 
 jobs:
   job_build_and_test:
