@@ -9,7 +9,7 @@
 ### Launch pleasanter
 
 ```bash
-git clone http://raucha/pleasanter-docker-compose
+git clone https://github.com/raucha/pleasanter-docker-compose.git
 cd pleasanter-docker-compose
 docker-compose build
 docker-compose up -d
